@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: "#f0f9ff",
+              100: "#e0f2fe",
+              200: "#bae6fd",
+              300: "#7dd3fc",
+              400: "#38bdf8",
+              500: "#0ea5e9",
+              600: "#0284c7",
+              700: "#0369a1",
+              800: "#075985",
+              900: "#0c4a6e"
+            },
+            emerald: {
+              50: "#ecfdf5",
+              500: "#10b981",
+              600: "#059669",
+              700: "#047857"
+            },
+            amber: {
+              50: "#fffbeb",
+              100: "#fef3c7",
+              500: "#f59e0b",
+              600: "#d97706"
+            }
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "sans-serif"],
+            arabic: ["Amiri", "serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+  </style>
+</head>
+<body class="bg-[#f8fafc] font-sans text-slate-800 antialiased min-h-screen selection:bg-brand-100 selection:text-brand-900">
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-white/95 backdrop-blur-xl border-r border-slate-200/80 z-50 flex flex-col justify-between shadow-[2px_0_24px_rgba(15,23,42,0.02)]">
+<div class="p-6">
+<!-- Academy Branding with Logo Image 17 -->
+<div class="flex items-center gap-3.5 pb-6 border-b border-slate-100">
+<div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-sky-50 via-white to-sky-100/70 p-1.5 border border-sky-100 shadow-sm flex items-center justify-center shrink-0">
+<img alt="Al-Munirat Academy Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXlkfmLq99D79hG70J25Yu4xmUcBPaW19KsfQLy-A4PfzKiG9GB2kQmJApfqh2UewA8hz8uL6EkY-KPOAnzH_eXtCGIkW3OoUP4K1IJ2OLbKYhyJCP8CdWJ3-Low1PtrRmE7EU_ha3CzyKB4f42d0zCrHBhMNXqBibZc2_lqdOYC-Dr21G-cOQNyQKyDI_PYE3l_7bGVO3y-26Sr-VyXAr9Xw30fgHGiqtP1WpraNKSg0lyB9RXERN5CmcbU8mHHGrHog"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-slate-900 text-lg tracking-tight leading-none">Al-Munirat</span>
+<span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold border border-emerald-200/60">Sanad LMS</span>
+</div>
+<span class="text-xs text-slate-500 mt-1 font-medium font-arabic">أكاديمية المنيرة • بوابَة الطَّالِب</span>
+</div>
+</div>
+<!-- Student Fast Persona Pill -->
+<div class="mt-5 p-3 rounded-2xl bg-gradient-to-r from-sky-50/70 via-white to-blue-50/40 border border-sky-100/80 flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-2.5">
+<div class="relative">
+<img alt="Student Profile" class="w-9 h-9 rounded-xl object-cover ring-2 ring-white shadow-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDjvEjxzVjPfA_wUC7_oj53OGOiY0lYivqkfYb9J7-1NKGlVNIX4quZwf3oIVSVoI2sOrpdoFQdxNyxNaggZV4Ym8kMYt1MXpoBBwrhh1_Rezw7WWhErNfytp5JhAJFTCyDEII3tzWirOGByYuA-TfGwV7LZnnBRf8-g7YlWfegGuAl_OSsh2QR_bjVsIck7qJgnz14CSRfSS1DfZI8iE_w5GylyvpG85v2hBZRTb3WKnN67Vc8wCsRA"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 rounded-full ring-2 ring-white"></span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-slate-900 leading-snug">Aisha Al-Mansoor</span>
+<span class="text-[11px] text-brand-700 font-medium">Scholar Track • Lvl 2</span>
+</div>
+</div>
+<span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg border border-emerald-200/40">Verified</span>
+</div>
+<!-- Nav Sections -->
+<div class="mt-6 flex flex-col gap-1">
+<div class="px-3 pb-2 text-[11px] uppercase tracking-wider font-bold text-slate-400">Academic Hub</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-brand-600 text-white font-medium text-sm shadow-sm shadow-brand-500/25 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span>Dashboard &amp; CBT</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-700 hover:bg-sky-50/70 font-medium text-sm transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-brand-600 transition-colors">menu_book</span>
+<span>My Courses &amp; Sanad</span>
+<span class="ml-auto text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full group-hover:bg-brand-100 group-hover:text-brand-700">4</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-700 hover:bg-sky-50/70 font-medium text-sm transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-brand-600 transition-colors">quiz</span>
+<span>CBT Examination Arena</span>
+<span class="ml-auto flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-700 hover:bg-sky-50/70 font-medium text-sm transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-brand-600 transition-colors">folder_open</span>
+<span>Learning Vault (Downloads)</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-700 hover:bg-sky-50/70 font-medium text-sm transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-brand-600 transition-colors">assignment</span>
+<span>Assignments &amp; Audio Drills</span>
+<span class="ml-auto text-[11px] bg-amber-50 text-amber-700 font-semibold px-2 py-0.5 rounded-full border border-amber-200/50">2 Due</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-700 hover:bg-sky-50/70 font-medium text-sm transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-brand-600 transition-colors">calendar_month</span>
+<span>Prayer &amp; Sanad Schedule</span>
+</a>
+</nav>
+<div class="px-3 pt-5 pb-2 text-[11px] uppercase tracking-wider font-bold text-slate-400">Settings &amp; Support</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-700 hover:bg-sky-50/70 font-medium text-sm transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-brand-600">tune</span>
+<span>Study Preferences</span>
+</a>
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-700 hover:bg-sky-50/70 font-medium text-sm transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-brand-600">live_help</span>
+<span>Ask Academic Advisor</span>
+</a>
+</nav>
+</div>
+</div>
+<!-- Sidebar Bottom Public Switcher -->
+<div class="p-5 border-t border-slate-100 bg-slate-50/50">
+<a class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-200/70 text-slate-600 hover:border-brand-200 hover:text-brand-700 shadow-2xs transition-all" href="#">
+<div class="flex items-center gap-2 text-xs font-semibold">
+<span class="material-symbols-outlined text-sm text-brand-600">arrow_back</span>
+<span>Back to Public Academy</span>
+</div>
+<span class="material-symbols-outlined text-sm text-slate-400">launch</span>
+</a>
+</div>
+</aside>
+<!-- Main Body Content Area -->
+<div class="pl-72 flex flex-col min-h-screen">
+<!-- Modern Sleek Header Bar -->
+<header class="fixed top-0 left-72 right-0 h-18 bg-white/80 backdrop-blur-md border-b border-slate-200/70 z-40 flex items-center justify-between px-8">
+<!-- Search with Keyboard shortcut -->
+<div class="flex items-center gap-4">
+<div class="relative w-80 lg:w-96">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full pl-10 pr-12 py-2 bg-slate-50 hover:bg-slate-100/80 focus:bg-white text-xs text-slate-900 border border-slate-200/80 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition-all placeholder:text-slate-400" placeholder="Search Surah, Fiqh lessons, tests or notes..." type="text"/>
+<kbd class="absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 text-[10px] font-semibold text-slate-400 bg-white border border-slate-200 rounded">⌘K</kbd>
+</div>
+</div>
+<!-- Prayer, Hijri Date, Live Time & Profile Actions -->
+<div class="flex items-center gap-4">
+<!-- Live Prayer Countdown Pill -->
+<div class="hidden md:flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-100/90 text-xs">
+<span class="w-2 h-2 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
+<span class="text-slate-600 font-medium">Next Prayer:</span>
+<span class="font-bold text-brand-800">Asr in 1h 42m</span>
+<span class="text-slate-400 font-light">•</span>
+<span class="text-slate-500 text-[11px]">15:22 Makkah</span>
+</div>
+<!-- Hijri Date Badge -->
+<div class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100/70 text-slate-600 text-xs font-medium">
+<span class="material-symbols-outlined text-sm text-brand-600">calendar_today</span>
+<span>14 Shawwāl 1446 AH</span>
+</div>
+<!-- Notification Bell -->
+<button class="relative p-2 rounded-xl text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors" title="Notifications">
+<span class="material-symbols-outlined text-xl">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-amber-500 ring-2 ring-white"></span>
+</button>
+<!-- Divider -->
+<div class="h-6 w-px bg-slate-200"></div>
+<!-- Student Profile Quick Menu -->
+<div class="flex items-center gap-3 pl-1">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold text-slate-900 leading-tight">Sister Aisha Al-Mansoor</p>
+<p class="text-[11px] text-brand-700 font-medium">Sanad Scholar Track • Level 2</p>
+</div>
+<img alt="Aisha Al-Mansoor" class="w-10 h-10 rounded-full object-cover ring-2 ring-brand-500/20 shadow-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDjvEjxzVjPfA_wUC7_oj53OGOiY0lYivqkfYb9J7-1NKGlVNIX4quZwf3oIVSVoI2sOrpdoFQdxNyxNaggZV4Ym8kMYt1MXpoBBwrhh1_Rezw7WWhErNfytp5JhAJFTCyDEII3tzWirOGByYuA-TfGwV7LZnnBRf8-g7YlWfegGuAl_OSsh2QR_bjVsIck7qJgnz14CSRfSS1DfZI8iE_w5GylyvpG85v2hBZRTb3WKnN67Vc8wCsRA"/>
+</div>
+</div>
+</header>
+<!-- Main Content Container -->
+<main class="w-full pt-22 px-8 pb-14 flex flex-col gap-8">
+<!-- 1. Personalized Student Welcome & Academic Bar -->
+<section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-sky-50/40 to-blue-50/60 border border-sky-100 p-7 shadow-xs">
+<div class="absolute -right-16 -top-16 w-72 h-72 rounded-full bg-sky-200/30 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/4 -bottom-16 w-60 h-60 rounded-full bg-emerald-100/40 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="w-16 h-16 rounded-2xl bg-white p-1 ring-4 ring-sky-100 shadow-sm shrink-0">
+<img alt="Student Portrait" class="w-full h-full rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDjvEjxzVjPfA_wUC7_oj53OGOiY0lYivqkfYb9J7-1NKGlVNIX4quZwf3oIVSVoI2sOrpdoFQdxNyxNaggZV4Ym8kMYt1MXpoBBwrhh1_Rezw7WWhErNfytp5JhAJFTCyDEII3tzWirOGByYuA-TfGwV7LZnnBRf8-g7YlWfegGuAl_OSsh2QR_bjVsIck7qJgnz14CSRfSS1DfZI8iE_w5GylyvpG85v2hBZRTb3WKnN67Vc8wCsRA"/>
+</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/50">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Active Examination Window
+                </span>
+<span class="text-xs text-slate-400">•</span>
+<span class="text-xs text-slate-500 font-medium">Session 1446-2A</span>
+</div>
+<h1 class="text-2xl font-bold text-slate-900 tracking-tight mt-1.5">
+                Assalamu Alaikum wa Rahmatullah, Sister Aisha
+              </h1>
+<p class="text-sm font-arabic text-brand-800 mt-1 font-semibold tracking-wide" dir="rtl">
+                مَرْحَبًا بِكِ فِي رِحَابِ العِلْمِ وَالتَّزْكِيَةِ — «مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الجَنَّةِ»
+              </p>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2.5 self-start lg:self-center">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-200/90 hover:bg-slate-50 text-slate-700 text-xs font-semibold shadow-2xs hover:border-slate-300 transition-all" type="button">
+<span class="material-symbols-outlined text-base text-brand-600">contact_support</span>
+<span>Ask Ustadha</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-200/90 hover:bg-slate-50 text-slate-700 text-xs font-semibold shadow-2xs hover:border-slate-300 transition-all" type="button">
+<span class="material-symbols-outlined text-base text-brand-600">auto_stories</span>
+<span>Curriculum Notes</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold shadow-sm shadow-brand-500/30 transition-all" type="button">
+<span class="material-symbols-outlined text-base">video_camera_front</span>
+<span>Join Live Halaqah</span>
+</button>
+</div>
+</div>
+<!-- Academic Metric Cards -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 pt-6 border-t border-sky-100/70">
+<div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-white border border-slate-100 shadow-2xs">
+<div class="w-11 h-11 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-brand-700 shrink-0">
+<span class="material-symbols-outlined text-xl">menu_book</span>
+</div>
+<div>
+<div class="text-xl font-bold text-slate-900 leading-tight">4 Courses</div>
+<div class="text-xs text-slate-500 mt-0.5">Enrolled This Term</div>
+</div>
+</div>
+<div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-white border border-slate-100 shadow-2xs">
+<div class="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
+<span class="material-symbols-outlined text-xl">verified_user</span>
+</div>
+<div>
+<div class="text-xl font-bold text-slate-900 leading-tight">98%</div>
+<div class="text-xs text-slate-500 mt-0.5">Attendance &amp; Halaqah</div>
+</div>
+</div>
+<div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-white border border-brand-200/70 ring-2 ring-brand-100/50 shadow-2xs">
+<div class="w-11 h-11 rounded-xl bg-brand-600 flex items-center justify-center text-white shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-xl">timer</span>
+</div>
+<div>
+<div class="text-xl font-bold text-brand-700 leading-tight">1 Active</div>
+<div class="text-xs text-brand-900 font-medium mt-0.5">CBT Exam In-Session</div>
+</div>
+</div>
+<div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-white border border-slate-100 shadow-2xs">
+<div class="w-11 h-11 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-600 shrink-0">
+<span class="material-symbols-outlined text-xl">workspace_premium</span>
+</div>
+<div>
+<div class="text-xl font-bold text-slate-900 leading-tight">3.92 <span class="text-xs text-slate-400 font-normal">/ 88.5%</span></div>
+<div class="text-xs text-slate-500 mt-0.5">Sanad Cumulative GPA</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. CBT Examination Module (Centerpiece - Modern Exam Suite) -->
+<section class="rounded-3xl bg-white border border-slate-200/90 shadow-sm overflow-hidden flex flex-col">
+<!-- Exam Header -->
+<div class="px-7 py-5 bg-gradient-to-r from-slate-900 via-brand-950 to-slate-900 text-white flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center text-sky-300 shrink-0">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<div>
+<div class="flex items-center gap-2 text-xs font-semibold tracking-wider text-sky-300">
+<span class="uppercase">Mid-Term Assessment 1446 AH</span>
+<span>•</span>
+<span class="font-arabic font-normal text-sky-200 text-sm" dir="rtl">اختبار منتصف الفصل الأكاديمي</span>
+</div>
+<h2 class="text-lg font-bold text-white tracking-tight mt-0.5">
+                Arabic Grammar &amp; Tajweed Rules <span class="font-arabic font-normal text-slate-300">(قواعد النحو وأحكام التجويد)</span>
+</h2>
+</div>
+</div>
+<!-- Right Clock & Proctor Badge -->
+<div class="flex items-center gap-4">
+<!-- Timer Pill -->
+<div class="flex items-center gap-3 px-4 py-2 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
+</span>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-300 font-medium uppercase tracking-wider leading-none">Time Remaining</span>
+<span class="text-base font-extrabold text-white tracking-wider font-mono mt-0.5" id="cbt-timer">28:15</span>
+</div>
+</div>
+<!-- Proctored Seal -->
+<div class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-white/5 border border-white/10 text-xs">
+<span class="material-symbols-outlined text-emerald-400 text-base">verified_user</span>
+<div class="flex flex-col text-[11px] leading-tight">
+<span class="text-white font-semibold">Proctored Live</span>
+<span class="text-slate-400 text-[10px]">Encrypted Session</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Question & Palette Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
+<!-- Left Column: Current Question Body -->
+<div class="lg:col-span-8 p-7 flex flex-col justify-between bg-white">
+<div>
+<!-- Question Meta & Bookmark -->
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+<div class="flex items-center gap-2.5">
+<span class="px-3 py-1 rounded-xl bg-brand-50 text-brand-700 font-bold text-xs border border-brand-200/60">
+                    Question 12 of 40
+                  </span>
+<span class="text-xs text-slate-500 font-medium">Single Choice • 1.5 Marks</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-600 hover:text-amber-700 hover:border-amber-300 hover:bg-amber-50/50 transition-all" id="flag-btn" onclick="toggleFlag()" type="button">
+<span class="material-symbols-outlined text-base" id="flag-icon">bookmark_border</span>
+<span id="flag-text">Flag for Review</span>
+</button>
+</div>
+<!-- Question Box with Crisp Arabic Typography -->
+<div class="p-6 rounded-2xl bg-gradient-to-b from-sky-50/30 to-slate-50/50 border border-sky-100/70 mb-6">
+<p class="font-arabic text-xl md:text-2xl font-bold text-slate-900 leading-relaxed text-right mb-3" dir="rtl">
+                  مَا هُوَ حُكْمُ النُّوْنِ السَّاكِنَةِ أَوْ التَّنْوِيْنِ إِذَا جَاءَ بَعْدَهَا حَرْفُ الرَّاءِ (ر)؟
+                </p>
+<p class="text-sm md:text-base text-slate-700 font-medium leading-relaxed">
+                  What is the applicable Tajweed rule when a <span class="text-brand-700 font-semibold">Noon Sakinah (نْ)</span> or <span class="text-brand-700 font-semibold">Tanween</span> is followed immediately by the letter <span class="text-brand-700 font-semibold">Ra (ر)</span>?
+                </p>
+</div>
+<!-- Answer Options Grid -->
+<div class="space-y-3">
+<!-- Option A -->
+<label class="flex items-center justify-between p-4 rounded-2xl border border-slate-200 hover:border-brand-300 hover:bg-sky-50/30 cursor-pointer transition-all group">
+<div class="flex items-center gap-3.5">
+<input class="w-4 h-4 text-brand-600 border-slate-300 focus:ring-brand-500" name="exam_q12" type="radio" value="A"/>
+<div>
+<div class="text-xs font-bold text-slate-400 group-hover:text-brand-700">Option A</div>
+<div class="text-sm font-medium text-slate-800">Al-Izh-har Al-Halqi <span class="text-xs text-slate-500">(Clear Throat Pronunciation)</span></div>
+</div>
+</div>
+<span class="font-arabic text-lg text-slate-500 group-hover:text-brand-700 transition-colors" dir="rtl">الإِظْهَار الحَلْقِي</span>
+</label>
+<!-- Option B (Selected State) -->
+<label class="flex items-center justify-between p-4 rounded-2xl border-2 border-brand-600 bg-sky-50/60 shadow-xs cursor-pointer transition-all">
+<div class="flex items-center gap-3.5">
+<input checked="" class="w-4 h-4 text-brand-600 border-brand-600 focus:ring-brand-500" name="exam_q12" type="radio" value="B"/>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-brand-700">Option B</span>
+<span class="text-[10px] font-bold px-2 py-0.2 rounded-full bg-brand-600 text-white">Selected Answer</span>
+</div>
+<div class="text-sm font-bold text-slate-900 mt-0.5">
+                        Al-Idgham Bi Ghayri Ghunnah <span class="text-xs font-normal text-slate-600">(Complete Assimilation without Nasalization)</span>
+</div>
+</div>
+</div>
+<span class="font-arabic text-lg font-bold text-brand-800" dir="rtl">الإِدْغَام بِغَيْرِ غُنَّة</span>
+</label>
+<!-- Option C -->
+<label class="flex items-center justify-between p-4 rounded-2xl border border-slate-200 hover:border-brand-300 hover:bg-sky-50/30 cursor-pointer transition-all group">
+<div class="flex items-center gap-3.5">
+<input class="w-4 h-4 text-brand-600 border-slate-300 focus:ring-brand-500" name="exam_q12" type="radio" value="C"/>
+<div>
+<div class="text-xs font-bold text-slate-400 group-hover:text-brand-700">Option C</div>
+<div class="text-sm font-medium text-slate-800">Al-Iqlab <span class="text-xs text-slate-500">(Conversion to Meem with Ghunnah)</span></div>
+</div>
+</div>
+<span class="font-arabic text-lg text-slate-500 group-hover:text-brand-700 transition-colors" dir="rtl">الإِقْلَاب</span>
+</label>
+<!-- Option D -->
+<label class="flex items-center justify-between p-4 rounded-2xl border border-slate-200 hover:border-brand-300 hover:bg-sky-50/30 cursor-pointer transition-all group">
+<div class="flex items-center gap-3.5">
+<input class="w-4 h-4 text-brand-600 border-slate-300 focus:ring-brand-500" name="exam_q12" type="radio" value="D"/>
+<div>
+<div class="text-xs font-bold text-slate-400 group-hover:text-brand-700">Option D</div>
+<div class="text-sm font-medium text-slate-800">Al-Ikhfa Al-Haqiqi <span class="text-xs text-slate-500">(True Concealment)</span></div>
+</div>
+</div>
+<span class="font-arabic text-lg text-slate-500 group-hover:text-brand-700 transition-colors" dir="rtl">الإِخْفَاء الحَقِيقِي</span>
+</label>
+</div>
+</div>
+<!-- Footer Controls -->
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-slate-100">
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span>Previous Question</span>
+</button>
+<div class="flex items-center gap-2.5">
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs shadow-xs transition-all" type="button">
+<span>Next Question</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs shadow-sm shadow-emerald-600/20 transition-all" onclick="openSubmitModal()" type="button">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>Submit Exam</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Question Navigation Palette -->
+<div class="lg:col-span-4 p-6 bg-slate-50/60 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-200/70">
+<h3 class="text-sm font-bold text-slate-900">Question Palette</h3>
+<span class="text-xs font-bold text-brand-700 bg-brand-50 px-2.5 py-0.5 rounded-full border border-brand-200/60">32 / 40 Answered</span>
+</div>
+<!-- Legend -->
+<div class="grid grid-cols-2 gap-2 p-3 rounded-2xl bg-white border border-slate-200/80 mb-4 text-[11px] font-medium text-slate-600">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-md bg-emerald-600 text-white flex items-center justify-center text-[9px] font-bold">✓</span>
+<span>Answered (32)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-md bg-brand-600 text-white flex items-center justify-center text-[9px] font-bold">12</span>
+<span>Current (1)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-md bg-amber-100 text-amber-700 border border-amber-300 flex items-center justify-center text-[9px] font-bold">★</span>
+<span>Flagged (2)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-md bg-slate-100 text-slate-400 flex items-center justify-center text-[9px]"></span>
+<span>Unvisited (5)</span>
+</div>
+</div>
+<!-- 40 Questions Numbers Grid -->
+<div class="grid grid-cols-8 gap-1.5" id="palette-grid">
+<!-- Answered Q1-Q4 -->
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">1</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">2</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">3</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">4</button>
+<!-- Q5 Flagged -->
+<button class="h-8 rounded-lg bg-amber-100 border border-amber-300 text-amber-800 text-xs font-bold flex items-center justify-center" type="button">5</button>
+<!-- Answered Q6-Q11 -->
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">6</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">7</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">8</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">9</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">10</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">11</button>
+<!-- Q12: CURRENT -->
+<button class="h-8 rounded-lg bg-brand-600 text-white text-xs font-bold ring-2 ring-brand-300 shadow-sm flex items-center justify-center" id="matrix-q12" type="button">12</button>
+<!-- Q13-Q14 -->
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">13</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">14</button>
+<!-- Q15 Flagged -->
+<button class="h-8 rounded-lg bg-amber-100 border border-amber-300 text-amber-800 text-xs font-bold flex items-center justify-center" type="button">15</button>
+<!-- Q16-Q32 Answered -->
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">16</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">17</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">18</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">19</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">20</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">21</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">22</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">23</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">24</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">25</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">26</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">27</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">28</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">29</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">30</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">31</button>
+<button class="h-8 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center hover:opacity-90" type="button">32</button>
+<!-- Q33-Q40 Unvisited -->
+<button class="h-8 rounded-lg bg-white border border-slate-200 text-slate-600 text-xs font-medium flex items-center justify-center hover:bg-slate-100" type="button">33</button>
+<button class="h-8 rounded-lg bg-white border border-slate-200 text-slate-600 text-xs font-medium flex items-center justify-center hover:bg-slate-100" type="button">34</button>
+<button class="h-8 rounded-lg bg-white border border-slate-200 text-slate-600 text-xs font-medium flex items-center justify-center hover:bg-slate-100" type="button">35</button>
+<button class="h-8 rounded-lg bg-white border border-slate-200 text-slate-600 text-xs font-medium flex items-center justify-center hover:bg-slate-100" type="button">36</button>
+<button class="h-8 rounded-lg bg-white border border-slate-200 text-slate-600 text-xs font-medium flex items-center justify-center hover:bg-slate-100" type="button">37</button>
+<button class="h-8 rounded-lg bg-white border border-slate-200 text-slate-600 text-xs font-medium flex items-center justify-center hover:bg-slate-100" type="button">38</button>
+<button class="h-8 rounded-lg bg-white border border-slate-200 text-slate-600 text-xs font-medium flex items-center justify-center hover:bg-slate-100" type="button">39</button>
+<button class="h-8 rounded-lg bg-white border border-slate-200 text-slate-600 text-xs font-medium flex items-center justify-center hover:bg-slate-100" type="button">40</button>
+</div>
+</div>
+<!-- Honor Code Footer Pill -->
+<div class="mt-4 p-3 rounded-2xl bg-white border border-slate-200/80 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-emerald-600 text-lg shrink-0">shield</span>
+<div>
+<p class="text-[11px] font-bold text-slate-900 leading-snug">Al-Amanah Academic Honor Code</p>
+<p class="text-[10px] text-slate-500 leading-tight mt-0.5">Tab-switch detection and webcam verification enabled under Mutawwif supervision.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Active Enrolled Courses -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-700">Enrolled Curriculum</span>
+<span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+<span class="text-xs text-slate-500">Semester 2 • Level 2</span>
+</div>
+<h2 class="text-xl font-bold text-slate-900 tracking-tight mt-0.5">My Sanad &amp; Degree Courses</h2>
+</div>
+<a class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 hover:text-brand-800 hover:underline" href="#">
+<span>View Full Transcript</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Course 1: Arabic Language Syntax -->
+<div class="group flex flex-col rounded-3xl bg-white border border-slate-200/80 overflow-hidden shadow-2xs hover:shadow-md transition-all">
+<div class="relative h-44 overflow-hidden">
+<img alt="Arabic Syntax" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZmYpoeWfs1qgQgzU8xHdbkHdZGAg5MzK0VmLqNVcP7GiHAoBEr_tp2d5u4DPrPCGQ55-4JEdbN3p_-H3PI1PPPHPfqg-mU1gvcvM937Nq8y6jUN11Y-SLwmQ8W0yJGXTops9L81W7oZWQGXMBbAXsEn-s6OGlVPyYqHC9mblM7eeIBADCCz6KkEQzUYYutfM8xcQI8qXkvFhTc4Aq-DsZxUjeXKuzP_WpIn4Mfs8mYAY9gwbcMiwrLQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20"></div>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[11px] font-bold text-brand-800">
+                Lughah Arabiyyah
+              </span>
+<span class="absolute bottom-3 right-3 text-white font-arabic text-base font-bold" dir="rtl">
+                اللغة العربية: النحو والصرف
+              </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between text-xs text-slate-500 mb-2 font-medium">
+<span class="flex items-center gap-1.5 text-slate-700">
+<span class="material-symbols-outlined text-sm text-brand-600">person</span>
+                    Sheikh Bilal Abdul-Haleem
+                  </span>
+<span class="text-brand-700 font-bold">Module 9/12</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 group-hover:text-brand-700 transition-colors">
+                  Arabic Language &amp; Syntax (Nahw &amp; Sarf)
+                </h3>
+<p class="text-xs text-slate-500 mt-1.5 line-clamp-2 leading-relaxed">
+                  Comprehensive grammatical parsing, nominal &amp; verbal constructs, Nunation, and morphological changes in verbs.
+                </p>
+<!-- Progress -->
+<div class="mt-4">
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span class="text-slate-500">Syllabus Completion</span>
+<span class="text-brand-700">72%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+<div class="h-full bg-brand-600 rounded-full" style="width: 72%"></div>
+</div>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+<span class="text-[11px] text-slate-400">Next: Al-Fi'l Al-Mu'tall</span>
+<button class="px-3.5 py-1.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold shadow-2xs transition-colors" type="button">
+                  Continue Lesson
+                </button>
+</div>
+</div>
+</div>
+<!-- Course 2: Tajweed & Surat Al-Baqarah -->
+<div class="group flex flex-col rounded-3xl bg-white border border-slate-200/80 overflow-hidden shadow-2xs hover:shadow-md transition-all">
+<div class="relative h-44 overflow-hidden">
+<img alt="Tajweed Quran Recitation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0M8hnMDNAmQo1HOESbcbEgQO_umFKqKKr5h1CHYXKmMnGBmYPFNT6e5EkFEN-Bl-5vxKN9-aYutUkpLgv6yrXN4yce6AImLf9WoV-nHXFfccnkfE08935bphTeT8_TBoPPRMAiiqXEMZ5v6pOzlA4jNunZksDN1T-VtXy83cMAS_Ttt3dWhuL0iKMhOtPa-EAxPB5lbbfHK78NVI3uDrdzhnrnqyovTopa0h6B3Ab7nA42H5IlhmPPw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20"></div>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-emerald-500/90 backdrop-blur-md text-[11px] font-bold text-white">
+                Sanad Ijazah Track
+              </span>
+<span class="absolute bottom-3 right-3 text-white font-arabic text-base font-bold" dir="rtl">
+                التجويد وتلاوة سورة البقرة
+              </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between text-xs text-slate-500 mb-2 font-medium">
+<span class="flex items-center gap-1.5 text-slate-700">
+<span class="material-symbols-outlined text-sm text-emerald-600">person</span>
+                    Sheikha Maryam Al-Kurdi
+                  </span>
+<span class="text-emerald-700 font-bold">Module 11/12</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 group-hover:text-brand-700 transition-colors">
+                  Tajweed &amp; Recitation: Surat Al-Baqarah
+                </h3>
+<p class="text-xs text-slate-500 mt-1.5 line-clamp-2 leading-relaxed">
+                  Makharij al-Huroof, Sifat Lazimah, Madd Munfasil &amp; Muttasil articulation with verified recordings.
+                </p>
+<!-- Progress -->
+<div class="mt-4">
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span class="text-slate-500">Syllabus Completion</span>
+<span class="text-emerald-700">91%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+<div class="h-full bg-emerald-600 rounded-full" style="width: 91%"></div>
+</div>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+<span class="text-[11px] text-emerald-600 font-semibold">Oral Exam: May 2</span>
+<button class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-2xs transition-colors" type="button">
+                  Practice Audio
+                </button>
+</div>
+</div>
+</div>
+<!-- Course 3: Fiqh of Hajj & Travel -->
+<div class="group flex flex-col rounded-3xl bg-white border border-slate-200/80 overflow-hidden shadow-2xs hover:shadow-md transition-all">
+<div class="relative h-44 overflow-hidden">
+<img alt="Islamic Fiqh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGufgtkLOI7Bfschpv7xDgYtvMpt4ky59gEWx8Ub3UlS1qEhUrhoZTrXngCV5OfjnM-C52HwicrULJB07HPePDTI62ld9d9Azpp9iKhj2u0jUlvz2WB847GPH8lcAQedDqvPqgT2svxVW-J6h7fPvLSgC44KoZQbyKXruQbxwewvnPoHyVQf7fefFkp8w1QkGRB79y5cJNMADoYtO8BlHZQy1HtSU4_pPQMvdQSCYxvKubCZK7MZhN8g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20"></div>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-[11px] font-bold text-white">
+                Fiqh al-Ibadat
+              </span>
+<span class="absolute bottom-3 right-3 text-white font-arabic text-base font-bold" dir="rtl">
+                فقه الحج والعمرة والأسفار
+              </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between text-xs text-slate-500 mb-2 font-medium">
+<span class="flex items-center gap-1.5 text-slate-700">
+<span class="material-symbols-outlined text-sm text-brand-600">person</span>
+                    Ustadh Ahmad Al-Farouq
+                  </span>
+<span class="text-slate-600 font-bold">Module 8/12</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 group-hover:text-brand-700 transition-colors">
+                  Islamic Studies: Fiqh of Hajj &amp; Travel
+                </h3>
+<p class="text-xs text-slate-500 mt-1.5 line-clamp-2 leading-relaxed">
+                  Jurisprudence of Ihram, Miqat, Tawaf, Sa'i, and travel exemptions according to authentic classical texts.
+                </p>
+<!-- Progress -->
+<div class="mt-4">
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span class="text-slate-500">Syllabus Completion</span>
+<span class="text-brand-700">68%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+<div class="h-full bg-brand-600 rounded-full" style="width: 68%"></div>
+</div>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+<span class="text-[11px] text-amber-700 font-semibold">Assignment Due: 3d</span>
+<button class="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold transition-colors" type="button">
+                  Open Syllabus
+                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Split Grid: Verified CBT Results & Learning Vault -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left: Verified CBT Examination Results -->
+<div class="lg:col-span-6 rounded-3xl bg-white border border-slate-200/80 p-6 flex flex-col justify-between shadow-2xs">
+<div>
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-xl bg-sky-50 text-brand-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">verified</span>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-900">Recent CBT Examination Results</h3>
+<p class="text-[11px] text-slate-500">Authenticated via Academy Sanad Board</p>
+</div>
+</div>
+<span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-0.5 rounded-full">
+                All Verified
+              </span>
+</div>
+<!-- List of Results -->
+<div class="space-y-3">
+<!-- Result 1 -->
+<div class="p-3.5 rounded-2xl bg-slate-50/70 border border-slate-100 flex items-center justify-between hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-brand-600 text-white flex flex-col items-center justify-center font-bold text-sm shadow-xs shrink-0">
+<span>A+</span>
+<span class="text-[9px] font-normal leading-none opacity-90">96%</span>
+</div>
+<div>
+<h4 class="text-xs font-bold text-slate-900">Tajweed Fundamentals CBT Term 1</h4>
+<p class="text-[11px] text-slate-500 mt-0.5">Score: <strong class="text-slate-800">48 / 50 Marks</strong> • Top 2% Percentile</p>
+<span class="text-[10px] text-emerald-700 font-semibold flex items-center gap-1 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                      Passed with Honors • Shaykhah Maryam
+                    </span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:border-brand-300 text-xs font-semibold text-slate-700 hover:text-brand-700 shadow-2xs transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm">military_tech</span>
+<span>Certificate</span>
+</button>
+</div>
+<!-- Result 2 -->
+<div class="p-3.5 rounded-2xl bg-slate-50/70 border border-slate-100 flex items-center justify-between hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-emerald-600 text-white flex flex-col items-center justify-center font-bold text-sm shadow-xs shrink-0">
+<span>A</span>
+<span class="text-[9px] font-normal leading-none opacity-90">84%</span>
+</div>
+<div>
+<h4 class="text-xs font-bold text-slate-900">Fiqh al-Ibadat Mid-Semester CBT</h4>
+<p class="text-[11px] text-slate-500 mt-0.5">Score: <strong class="text-slate-800">42 / 50 Marks</strong> • Taken Apr 12, 2025</p>
+<span class="text-[10px] text-slate-500 font-medium mt-0.5">
+                      Proctor Cleared • Evaluated by Sheikh Tariq
+                    </span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:border-brand-300 text-xs font-semibold text-slate-700 hover:text-brand-700 shadow-2xs transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span>Review</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Analytics Metric -->
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+<span class="text-slate-500 font-medium">Cumulative CBT Accuracy on Tajweed: <strong class="text-emerald-700 font-bold">94.2%</strong></span>
+<a class="font-bold text-brand-700 hover:underline" href="#">Full Assessment Log →</a>
+</div>
+</div>
+<!-- Right: Learning Materials & Downloads Vault -->
+<div class="lg:col-span-6 rounded-3xl bg-white border border-slate-200/80 p-6 flex flex-col justify-between shadow-2xs">
+<div>
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-xl bg-sky-50 text-brand-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">cloud_download</span>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-900">Learning Vault &amp; Downloads</h3>
+<p class="text-[11px] text-slate-500">Sanad-accredited manuscripts and recitation guides</p>
+</div>
+</div>
+<span class="text-xs text-slate-400 font-medium">Updated 24h ago</span>
+</div>
+<!-- Resources List -->
+<div class="space-y-2.5">
+<!-- Item 1: PDF -->
+<div class="p-3 rounded-2xl bg-slate-50/70 border border-slate-100 hover:bg-sky-50/40 hover:border-sky-200 flex items-center justify-between transition-all">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 border border-rose-100 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">picture_as_pdf</span>
+</div>
+<div>
+<h4 class="text-xs font-bold text-slate-900">Madinah Arabic Grammar (Annotated PDF)</h4>
+<p class="text-[11px] text-slate-500">Volume 2 with full vocabulary index • 14.8 MB</p>
+</div>
+</div>
+<button class="p-2 text-slate-400 hover:text-brand-600 hover:bg-white rounded-xl transition-all" title="Download" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+<!-- Item 2: Audio -->
+<div class="p-3 rounded-2xl bg-slate-50/70 border border-slate-100 hover:bg-sky-50/40 hover:border-sky-200 flex items-center justify-between transition-all">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">graphic_eq</span>
+</div>
+<div>
+<h4 class="text-xs font-bold text-slate-900">Surat Al-Baqarah (Verses 1-141) Studio Audio</h4>
+<p class="text-[11px] text-slate-500">Slow Murattal for articulation practice • 48.2 MB MP3</p>
+</div>
+</div>
+<button class="p-2 text-slate-400 hover:text-emerald-600 hover:bg-white rounded-xl transition-all" title="Download" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+<!-- Item 3: Slides -->
+<div class="p-3 rounded-2xl bg-slate-50/70 border border-slate-100 hover:bg-sky-50/40 hover:border-sky-200 flex items-center justify-between transition-all">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-sky-50 text-brand-600 border border-sky-100 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">slideshow</span>
+</div>
+<div>
+<h4 class="text-xs font-bold text-slate-900">Rules of Nun Sakinah &amp; Tanween Deck</h4>
+<p class="text-[11px] text-slate-500">Full visual breakdown by Sheikh Bilal • 6.4 MB</p>
+</div>
+</div>
+<button class="p-2 text-slate-400 hover:text-brand-600 hover:bg-white rounded-xl transition-all" title="Download" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+<span class="text-slate-500 font-medium">Offline Cache: 3 items synced to device</span>
+<a class="font-bold text-brand-700 hover:underline" href="#">Open Academy Drive →</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Submission Confirmation Modal -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/40 backdrop-blur-sm p-4" id="submit-modal">
+<div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 flex flex-col items-center text-center animate-in fade-in zoom-in-95 duration-200">
+<div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">task_alt</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900">Ready to Submit Examination?</h3>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+        You have answered <strong class="text-slate-900">32 of 40</strong> questions with <strong class="text-amber-700">2 questions flagged</strong> for review. Unanswered questions will be computed automatically.
+      </p>
+<div class="w-full bg-slate-50 rounded-2xl p-4 my-4 flex justify-between text-left text-xs border border-slate-100">
+<div>
+<span class="text-slate-500">Remaining Time:</span>
+<p class="font-bold text-slate-900 text-sm">28 Minutes Left</p>
+</div>
+<div class="text-right">
+<span class="text-slate-500">Passing Benchmark:</span>
+<p class="font-bold text-emerald-700 text-sm">70% Required</p>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full">
+<button class="flex-1 py-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-bold transition-colors" onclick="closeSubmitModal()" type="button">
+          Return to Test
+        </button>
+<button class="flex-1 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm shadow-emerald-600/30 transition-colors" onclick="finalizeExam()" type="button">
+          Confirm &amp; Encrypt
+        </button>
+</div>
+</div>
+</div>
+<!-- CBT Logic Script -->
+<script>
+    // Live Countdown Timer
+    (function initExamCountdown() {
+      let secondsLeft = 28 * 60 + 15;
+      const display = document.getElementById('cbt-timer');
+      if (!display) return;
+
+      setInterval(() => {
+        if (secondsLeft > 0) {
+          secondsLeft--;
+          const m = Math.floor(secondsLeft / 60);
+          const s = secondsLeft % 60;
+          display.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+        }
+      }, 1000);
+    })();
+
+    // Flag Question Toggle
+    let flagged = false;
+    function toggleFlag() {
+      flagged = !flagged;
+      const icon = document.getElementById('flag-icon');
+      const text = document.getElementById('flag-text');
+      const tile = document.getElementById('matrix-q12');
+
+      if (flagged) {
+        icon.textContent = 'bookmark';
+        text.textContent = 'Flagged';
+        if (tile) {
+          tile.className = 'h-8 rounded-lg bg-amber-100 border border-amber-300 text-amber-800 text-xs font-bold shadow-sm flex items-center justify-center';
+        }
+      } else {
+        icon.textContent = 'bookmark_border';
+        text.textContent = 'Flag for Review';
+        if (tile) {
+          tile.className = 'h-8 rounded-lg bg-brand-600 text-white text-xs font-bold ring-2 ring-brand-300 shadow-sm flex items-center justify-center';
+        }
+      }
+    }
+
+    // Modal Control
+    function openSubmitModal() {
+      document.getElementById('submit-modal').classList.remove('hidden');
+    }
+    function closeSubmitModal() {
+      document.getElementById('submit-modal').classList.add('hidden');
+    }
+    function finalizeExam() {
+      closeSubmitModal();
+      alert('Alhamdulillah! Your examination responses have been sealed and encrypted for Sanad certification review.');
+    }
+  </script>
+</body></html>
