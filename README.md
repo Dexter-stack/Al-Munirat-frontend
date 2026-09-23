@@ -5,7 +5,7 @@ React + TypeScript frontend for the Al-Munirat Academy Islamic Madrasah LMS. Thi
 ## Tech stack
 
 - React 19 + TypeScript (strict)
-- Vite 8
+  
 - Tailwind CSS v4 + shadcn/ui (Radix primitives)
 - React Router v7
 - TanStack Query (server state, caching, mutations)
